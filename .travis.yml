@@ -16,7 +16,6 @@ env:
 matrix:
   include:
     - os: linux
-      arch: amd64
       addons:
         apt:
           sources:
@@ -27,17 +26,6 @@ matrix:
         - COMPILER="CC=gcc-8 && CXX=g++-8"
       compiler: gcc-8
 
-    - os: linux
-      arch: ppc64le
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-8
-      env:
-        - COMPILER="CC=gcc-8 && CXX=g++-8"
-      compiler: gcc-8
     - os: linux
       addons:
         apt:
